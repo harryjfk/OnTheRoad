@@ -1,0 +1,30 @@
+ttourpoloimages:
+    pattern:  /
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:index" }
+
+ttourpoloimages_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:show" }
+
+ttourpoloimages_new:
+    pattern:  /new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:new" }
+
+ttourpoloimages_create:
+    pattern:  /create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:create" }
+    requirements: { _method: post }
+
+ttourpoloimages_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:edit" }
+
+ttourpoloimages_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:update" }
+    requirements: { _method: post|put }
+
+ttourpoloimages_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTourpoloimages:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,31 @@
+{% extends 'OnTheRoadOnTheRoadBundle::layout.html.twig' %}
+
+ {% block container %}
+
+
+     <form action="{{ path('check') }}" method="post" class="form-signin">
+         <div class="row ">
+<div class="col-xs-3"></div>
+
+             <div id="information-front" class="col-xs-6 btn-center ">
+                 <h2 class="form-signin-heading">{% trans %}Please sign in{% endtrans %}</h2>
+
+                         <label for="_username" class="sr-only">{% trans %}Email{% endtrans %}</label>
+
+                         <input type="" name="_username"  id="_username" class="form-control"
+                                placeholder="{% trans %}Email{% endtrans %}" required autofocus value="{{ last_username }}">
+                      <label for="_password" class="sr-only">{% trans %}Password{% endtrans %}</label>
+                 <input type="password" name="_password" id="_password" class="form-control" placeholder="{% trans %}Password{% endtrans %}" required>
+                 {% if error %}
+                     <div class="alert alert-danger error" role="alert">
+                         {{ error.message }}
+                     </div>
+
+                 {% endif %}
+                 <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans %}Login{% endtrans %}</button>
+             </div>
+             <div class="col-xs-3"></div>
+             </div>
+
+     </form>
+ {% endblock %}

@@ -1,0 +1,30 @@
+ttripdesc:
+    pattern:  /
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:index" }
+
+ttripdesc_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:show" }
+
+ttripdesc_new:
+    pattern:  /new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:new" }
+
+ttripdesc_create:
+    pattern:  /create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:create" }
+    requirements: { _method: post }
+
+ttripdesc_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:edit" }
+
+ttripdesc_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:update" }
+    requirements: { _method: post|put }
+
+ttripdesc_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTripdesc:delete" }
+    requirements: { _method: post|delete }

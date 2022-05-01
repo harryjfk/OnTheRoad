@@ -1,0 +1,45 @@
+{% extends 'OnTheRoadOnTheRoadBundle::adminlayout.html.twig' %}
+
+{% block container -%}
+    <h1>TTourpolo list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Namepolo</th>
+                <th>Datapolo</th>
+                <th>Descpolo</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('ttourpolo_show', { 'id': entity.id,'locale':customlocale }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.namepolo }}</td>
+                <td>{{ entity.datapolo }}</td>
+                <td>{{ entity.descpolo }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('ttourpolo_show', { 'id': entity.id,'locale':customlocale }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('ttourpolo_edit', { 'id': entity.id,'locale':customlocale }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('ttourpolo_new',{'locale':customlocale}) }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

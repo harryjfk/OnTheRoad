@@ -1,0 +1,41 @@
+{% extends 'OnTheRoadOnTheRoadBundle::adminlayout.html.twig' %}
+
+{% block container -%}
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Comment</div>
+
+        <!-- Table -->
+        <table class="table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Topic</th>
+                <td>{{ entity.topiccomment }}</td>
+            </tr>
+            <tr>
+                <th>Text</th>
+                <td>{{ entity.textcomment }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('tcomment',{'locale':customlocale }) }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('tcomment_edit', { 'id': entity.id,'locale':customlocale }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}

@@ -1,0 +1,26 @@
+<header id="main-header">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul id="main-menu" class="nav nav-pills hidden-xs">
+
+                <li class="{% if  app.request.get('_route') == 'index' %}active{% endif %}"><a href="{{ path('index',{'locale':customlocale}) }}">{% trans %}Start{% endtrans %}</a></li>
+                <li class="{% if  app.request.get('_route') == 'comments' %}active{% endif %}"><a href="{{ path('comments',{'locale':customlocale}) }}">{% trans %}Comments{% endtrans %}</a></li>
+                <li class="{% if  app.request.get('_route') == 'trips' %}active{% endif %}"><a href="{{ path('trips',{'locale':customlocale}) }}">{% trans %}Trips{% endtrans %}</a></li>
+            </ul>
+            <a href="#" id="mobile-button-menu" class="btn btn-default visible-xs">
+                <span class="glyphicon-th-list"></span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+    <div class="visible-xs">
+        <ul id="mobile-main-menu">
+            <li class="active"><a href="{{ path('index',{'locale':customlocale}) }}">{% trans %}Start{% endtrans %}</a></li>
+            <li><a href="{{ path('comments',{'locale':customlocale}) }}">{% trans %}Comments{% endtrans %}</a></li>
+            <li><a href="{{  path('trips',{'locale':customlocale}) }}">{% trans %}Trips{% endtrans %}</a></li>
+        </ul>
+    </div>
+</header>

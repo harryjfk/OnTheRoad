@@ -1,0 +1,49 @@
+{% extends 'OnTheRoadOnTheRoadBundle::adminlayout.html.twig' %}
+
+{% block container %}
+
+    <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">Comments list</div>
+
+        <!-- Table -->
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Id</th>
+                <th>Topic</th>
+                <th>Text</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td><a href="{{ path('tcomment_show', {'locale':customlocale, 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                    <td>{{ entity.topiccomment }}</td>
+                    <td>{{ entity.textcomment }}</td>
+                    <td>
+                        <ul>
+                            <li>
+                                <a href="{{ path('tcomment_show', {'locale':customlocale, 'id': entity.id }) }}">show</a>
+                            </li>
+                            <li>
+                                <a href="{{ path('tcomment_edit', {'locale':customlocale, 'id': entity.id }) }}">edit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+
+        <ul>
+        <li>
+            <a href="{{ path('tcomment_new',{'locale':customlocale,}) }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

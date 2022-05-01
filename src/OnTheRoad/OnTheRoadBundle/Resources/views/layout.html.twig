@@ -1,0 +1,26 @@
+{% extends '::base.html.twig' %}
+{% block title %}On The Road{% endblock %}
+{% block body %}
+    {% include 'OnTheRoadOnTheRoadBundle:Default:loginbar.html.twig' %}
+    <div class="container main-panel ui-btn-corner-all">
+        <div class="row">
+            <div class="col-xs-12">
+                <img src="{{ asset('bundles/ontheroad/images/196.jpg') }}" style="width:100%; height: 56px">
+            </div>
+        </div>
+        {% include 'OnTheRoadOnTheRoadBundle:Default:header.html.twig' %}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="updatepanel" id="updatepanel">
+                    {% block container %}
+
+                    {% endblock %}
+                </div>
+
+            </div>
+
+        </div>
+        {% include 'OnTheRoadOnTheRoadBundle:Default:footer.html.twig' %}
+
+    </div>
+{% endblock %}

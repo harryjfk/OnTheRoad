@@ -1,0 +1,19 @@
+{% extends 'OnTheRoadOnTheRoadBundle::layout.html.twig' %}
+
+ {% block container %}
+     <div class="row">
+         <div class="col-xs-12 question-button">
+             <a href="{{ path('comments',{'locale':customlocale}) }}" class="btn btn-sm btn-primary"> {% trans %}Back{% endtrans %}</a>
+         </div>
+     </div>
+ <form action="{{ path('newcomment',{'locale':customlocale}) }}" method="post">
+     {{ form_widget(form) }}
+
+     <div class="row" style="margin-top: 5px">
+         <div class="col-xs-12 btn-center">
+             <input type="submit" class="btn btn-sm btn-primary" value="{% trans %}OK   {% endtrans %}">
+         </div>
+
+     </div>
+     </form>
+ {% endblock %}

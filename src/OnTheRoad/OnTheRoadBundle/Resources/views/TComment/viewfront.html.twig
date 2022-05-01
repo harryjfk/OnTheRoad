@@ -1,0 +1,38 @@
+{% extends 'OnTheRoadOnTheRoadBundle::layout.html.twig' %}
+
+ {% block container %}
+     {#% if app.user %#}
+     <div class="row">
+         <div class="col-xs-12 col-md-12 question-button">
+             <a href="{{ path('comments',{'locale':customlocale}) }}" class="btn btn-sm btn-primary"> {% trans %}Back{% endtrans %}</a>
+         </div>
+     </div>
+         {#% endif %#}
+     <div class="row">
+         <ul class="list-group">
+
+             <li class="list-group-item">
+                 <div class="row ">
+                     <div class="col-xs-9 col-md-10 question-head">
+                         <img src="{{ asset('bundles/ontheroad/images/comment.png') }}">
+                         <a class="updt"
+                            >
+                             {{ comentario.topiccomment }}</a>
+
+                         <p> {{ comentario.textcomment }} </p>
+                     </div>
+                     <div class="col-xs-3 col-md-2 question-user">
+                         <div>
+                             <img
+                                     src="http://www.cubamyway.com/volatiles/images/00e64a698a2c06dd9e6971f7f0a623b5.jpg">
+
+                             <p>{{ comentario.Iduser.nameuser }}</p>
+                         </div>
+                     </div>
+                 </div>
+             </li>
+
+         </ul>
+     </div>
+
+ {% endblock %}

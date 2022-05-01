@@ -1,0 +1,27 @@
+ontheroadontheroad_tcomment:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/tcomment.yml"
+    prefix: /
+ontheroadontheroad_trealtrip:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/trealtrip.yml"
+    prefix: /
+ontheroadontheroad_trealtripdesc:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/trealtripdesc.yml"
+    prefix: /
+ontheroadontheroad_ttourpolo:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/ttourpolo.yml"
+    prefix: /
+ontheroadontheroad_ttourpoloimages:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/ttourpoloimages.yml"
+    prefix: /
+ontheroadontheroad_ttrip:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/ttrip.yml"
+    prefix: /
+ontheroadontheroad_ttripdesc:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/ttripdesc.yml"
+    prefix: /
+ontheroadontheroad_tuser:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing/tuser.yml"
+    prefix: /
+adminindex: 
+   pattern: /admin
+   defaults: {  _controller:OnTheRoadOnTheRoadBundle:Admin:index}

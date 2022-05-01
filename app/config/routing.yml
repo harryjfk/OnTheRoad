@@ -1,0 +1,32 @@
+ontheroad_ontheroad:
+    resource: "@OnTheRoadOnTheRoadBundle/Resources/config/routing.yml"
+    prefix:   /{locale}
+index:
+    pattern: /{locale}/
+    defaults: { _controller:OnTheRoadOnTheRoadBundle:Default:index,locale:en }
+
+login2:
+  pattern: /login
+  defaults: { _controller:OnTheRoadOnTheRoadBundle:TUser:login }
+  requirements:
+           _locale: en|es
+login:
+  pattern: /{locale}/login
+  defaults: { _controller:OnTheRoadOnTheRoadBundle:TUser:login }
+  requirements:
+           _locale: en|es
+logout:   
+  pattern: /logout    
+check:  
+  pattern: /check 
+register:  
+  pattern: /{locale}/register
+  defaults: { _controller:OnTheRoadOnTheRoadBundle:TUser:register }
+  requirements:
+          _locale: en|es
+profile:
+  pattern: /{locale}/profile
+  defaults: { _controller:OnTheRoadOnTheRoadBundle:TUser:profile }
+  requirements:
+          _locale: en|es
+

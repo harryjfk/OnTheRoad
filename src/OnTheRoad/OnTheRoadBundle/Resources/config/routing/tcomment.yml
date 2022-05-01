@@ -1,0 +1,46 @@
+comments:
+    pattern: /comments
+    defaults: { _controller:OnTheRoadOnTheRoadBundle:TComment:IndexFront }
+    requirements:
+        _locale: en|es
+newcomment:
+    pattern: /comments/new
+    defaults: { _controller:OnTheRoadOnTheRoadBundle:TComment:NewFront }
+    requirements:
+        _locale: en|es
+viewcomment:
+    pattern: /comments/{id}
+    defaults: { _controller:OnTheRoadOnTheRoadBundle:TComment:ViewFront }
+    requirements:
+        _locale: en|es
+
+tcomment:
+    pattern:  /admin/comment
+    defaults: { _controller: OnTheRoadOnTheRoadBundle:TComment:index }
+
+tcomment_show:
+    pattern:  /admin/comment/show/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TComment:show" }
+
+tcomment_new:
+    pattern:  /admin/comment/new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TComment:new" }
+
+tcomment_create:
+    pattern:  /admin/comment/create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TComment:create" }
+    requirements: { _method: post }
+
+tcomment_edit:
+    pattern:  /admin/comment/edit/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TComment:edit" }
+
+tcomment_update:
+    pattern: /admin/comment/update/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TComment:update" }
+    requirements: { _method: post|put }
+
+tcomment_delete:
+    pattern:  /admin/comment/delete/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TComment:delete" }
+    requirements: { _method: post|delete }

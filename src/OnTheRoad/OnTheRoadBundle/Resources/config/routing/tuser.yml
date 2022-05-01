@@ -1,0 +1,30 @@
+tuser:
+    pattern:  /
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:index" }
+
+tuser_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:show" }
+
+tuser_new:
+    pattern:  /new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:new" }
+
+tuser_create:
+    pattern:  /create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:create" }
+    requirements: { _method: post }
+
+tuser_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:edit" }
+
+tuser_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:update" }
+    requirements: { _method: post|put }
+
+tuser_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TUser:delete" }
+    requirements: { _method: post|delete }

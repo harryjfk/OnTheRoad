@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block body -%}
+    <h1>TTrip list</h1>
+
+    <table class="records_list">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nametrip</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for entity in entities %}
+            <tr>
+                <td><a href="{{ path('ttrip_show', { 'id': entity.id }) }}">{{ entity.id }}</a></td>
+                <td>{{ entity.nametrip }}</td>
+                <td>
+                <ul>
+                    <li>
+                        <a href="{{ path('ttrip_show', { 'id': entity.id }) }}">show</a>
+                    </li>
+                    <li>
+                        <a href="{{ path('ttrip_edit', { 'id': entity.id }) }}">edit</a>
+                    </li>
+                </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+        <ul>
+        <li>
+            <a href="{{ path('ttrip_new',{'locale':customlocale}) }}">
+                Create a new entry
+            </a>
+        </li>
+    </ul>
+    {% endblock %}

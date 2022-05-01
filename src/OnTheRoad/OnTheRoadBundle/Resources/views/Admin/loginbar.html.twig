@@ -1,0 +1,44 @@
+<div class="row login-bar">
+    <div class="col-xs-7 col-md-10">
+
+    </div>
+    <div class="col-xs-3 col-md-1" >
+        <div class="row ">
+            <div class="col-xs-6 btn-right padright">
+                <a  {% if app.user %}
+                        href="{{ path('profile',{'locale':customlocale}) }}">{% trans %}Profile{% endtrans %}
+
+                    {% else %}
+                        href="{{ path('login',{'locale':customlocale}) }}">{% trans %}Login{% endtrans %}
+                    {% endif %}
+                </a>
+
+            </div>
+            <div class="col-xs-6 btn-left padleft">
+                <a  {% if app.user  %}
+                        href="{{ path('logout',{'locale':customlocale}) }}">{% trans %}Logout{% endtrans %}
+
+                    {% else %}
+                        href="{{ path('register',{'locale':customlocale}) }}">{% trans %}Register{% endtrans %}
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-2 col-md-1" >
+        <div class="row ">
+            <div class="col-xs-6 btn-right padright language-icon">
+
+                <a href="
+
+                 {#{{ path(app.request.get('_route'),{'locale':'en','id':id}) }}#}
+
+
+                "><img src="{{ asset('bundles/ontheroad/images/english.ico')  }}"></a>
+            </div>
+            <div class="col-xs-6 btn-left padleft language-icon">
+                <a href="{#{ path(app.request.get('_route'),{'locale':'es'}) }}#}"><img src="{{ asset('bundles/ontheroad/images/spanish.ico')  }}"></a>
+            </div>
+        </div>
+    </div>
+</div>

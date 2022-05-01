@@ -1,0 +1,126 @@
+{% extends 'OnTheRoadOnTheRoadBundle::adminlayout.html.twig' %}
+  {% block adstylesheets %}
+      <link rel="stylesheet" href="{{ asset('bundles/ontheroad/css/jquery-jvectormap.css') }}"/>
+
+  {% endblock %}
+{% block container -%}
+    <h1>Polos</h1>
+
+    <table class="record_properties">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ entity.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ entity.namepolo }}</td>
+            </tr>
+            <tr>
+                <th>Data</th>
+                <td>{{ entity.datapolo }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ entity.descpolo }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+            <div class="mappanel">
+                <div id="map" class="map"></div>
+            </div>
+
+
+        <ul class="record_actions">
+    <li>
+        <a href="{{ path('ttourpolo',{'locale':customlocale}) }}">
+            Back to the list
+        </a>
+    </li>
+    <li>
+        <a href="{{ path('ttourpolo_edit', { 'id': entity.id,'locale':customlocale }) }}">
+            Edit
+        </a>
+    </li>
+    <li>{{ form(delete_form) }}</li>
+</ul>
+{% endblock %}
+{% block additionalscripts %}
+    <script src="{{ asset('bundles/ontheroad/js/jquery-jvectormap.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/jquery-mousewheel.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/svg/jvectormap.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/svg/abstract-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/abstract-canvas-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/abstract-shape-element.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-group-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-canvas-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-shape-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-path-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-circle-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-image-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg-text-element.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-group-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-canvas-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-shape-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-path-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-circle-element.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/vml-image-element.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/svg/map-object.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/region.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/marker.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/svg/vector-canvas.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/simple-scale.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/ordinal-scale.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/numeric-scale.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/color-scale.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/legend.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/data-series.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/proj.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/map.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/svg/svg.path.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/jquery.fancymap.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/list.js') }}"></script>
+
+    <script src="{{ asset('bundles/ontheroad/js/resizer.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/events.js') }}"></script>
+    <script src="{{ asset('bundles/ontheroad/js/jquery-jvectormap-cuba-all.js') }}"></script>
+
+    <script>
+        //  $(function(){
+        var markerData = {};
+        var map = new jvm.Map({
+                    container: $('.map'),
+                    map: 'cuba',
+                    markers: { latLng:{{  entity.datapolo }} ,name:"{{  entity.namepolo }}" ,item:"{{  entity.id }}" },
+
+                    backgroundColor: 'gray',
+                    markerStyle: {
+                        initial: {
+                            fill: 'blue'
+                        }
+                    }, onMarkerTipShow: function (e, tip, code) {
+                        map.tip.text(map.markers[code].name);
+                    },
+                    onMarkerClick: function (e, code) {
+
+                        /*    map.removeMarkers([code]); */
+                        //map.tip.hide();
+
+                    }
+                }
+        );
+
+
+        //   });
+    </script>
+{% endblock %}

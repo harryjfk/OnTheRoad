@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}{% endblock %}</title>
+        {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/ontheroad/css/bootstrap.min.css') }}"/>
+            <link rel="stylesheet" href="{{ asset('bundles/ontheroad/css/styles.css') }}"/>
+        {% endblock %}
+        {% block adstylesheets %}
+
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('bundles/ontheroad/favicon.ico') }}" />
+    </head>
+    <body >
+        {% block body %}
+        {% endblock %}
+        {% block javascripts %}
+            <script src="{{ asset('bundles/ontheroad/js/jquery.min.js') }}"></script>
+            <script src="{{ asset('bundles/ontheroad/js/bootstrap.min.js') }}"></script>
+            <script>
+
+                $(document).ready(function () {
+                    $('#mobile-button-menu').on("click", function () {
+
+                        $('#mobile-main-menu').slideToggle('fast');
+                    });
+
+                });
+
+
+            </script>
+
+        {% endblock %}
+        {% block additionalscripts %}
+        {% endblock %}
+    </body>
+</html>

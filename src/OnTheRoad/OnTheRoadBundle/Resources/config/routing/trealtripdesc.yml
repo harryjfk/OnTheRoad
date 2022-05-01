@@ -1,0 +1,30 @@
+trealtripdesc:
+    pattern:  /
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:index" }
+
+trealtripdesc_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:show" }
+
+trealtripdesc_new:
+    pattern:  /new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:new" }
+
+trealtripdesc_create:
+    pattern:  /create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:create" }
+    requirements: { _method: post }
+
+trealtripdesc_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:edit" }
+
+trealtripdesc_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:update" }
+    requirements: { _method: post|put }
+
+trealtripdesc_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtripdesc:delete" }
+    requirements: { _method: post|delete }

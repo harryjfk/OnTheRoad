@@ -1,0 +1,30 @@
+ttrip:
+    pattern:  /admin/trip
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:index" }
+
+ttrip_show:
+    pattern:  /admin/trip/show/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:show" }
+
+ttrip_new:
+    pattern:  /admin/trip/new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:new" }
+
+ttrip_create:
+    pattern:  /admin/trip/create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:create" }
+    requirements: { _method: post }
+
+ttrip_edit:
+    pattern:  /admin/trip/edit/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:edit" }
+
+ttrip_update:
+    pattern:  /admin/trip/update/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:update" }
+    requirements: { _method: post|put }
+
+ttrip_delete:
+    pattern:  /admin/trip/delete/{id}
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TTrip:delete" }
+    requirements: { _method: post|delete }

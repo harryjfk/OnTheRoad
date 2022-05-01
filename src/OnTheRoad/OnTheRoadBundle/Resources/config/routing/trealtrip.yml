@@ -1,0 +1,37 @@
+
+trips:
+    pattern: /trips
+    defaults: { _controller:OnTheRoadOnTheRoadBundle:TRealtrip:IndexFront }
+    requirements:
+        _locale: en|es
+
+trealtrip:
+    pattern:  /
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:index" }
+
+trealtrip_show:
+    pattern:  /{id}/show
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:show" }
+
+trealtrip_new:
+    pattern:  /new
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:new" }
+
+trealtrip_create:
+    pattern:  /create
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:create" }
+    requirements: { _method: post }
+
+trealtrip_edit:
+    pattern:  /{id}/edit
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:edit" }
+
+trealtrip_update:
+    pattern:  /{id}/update
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:update" }
+    requirements: { _method: post|put }
+
+trealtrip_delete:
+    pattern:  /{id}/delete
+    defaults: { _controller: "OnTheRoadOnTheRoadBundle:TRealtrip:delete" }
+    requirements: { _method: post|delete }

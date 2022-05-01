@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file source-language="en" datatype="plaintext" original="file.ext">
+        <body>
+            <trans-unit id="1">
+                <source>Start</source>
+                <target>Inicio</target>
+            </trans-unit>
+             <trans-unit id="2">
+              <source>Comments</source>
+               <target>Comentarios</target>
+            </trans-unit>
+            <trans-unit id="3">
+              <source>Trips</source>
+              <target>Viajes</target>
+            </trans-unit>
+            <trans-unit id="4">
+              <source>Register</source>
+              <target>Registrar</target>
+            </trans-unit>
+            <trans-unit id="5">
+              <source>Login</source>
+              <target>Iniciar Sesión</target>
+            </trans-unit>
+            <trans-unit id="6">
+              <source>Logout</source>
+              <target>Cerrar Sesión</target>
+            </trans-unit>
+            <trans-unit id="7">
+              <source>Profile</source>
+              <target>Perfil</target>
+            </trans-unit>
+            <trans-unit id="8">
+              <source>Who we are?</source>
+              <target>Quienes somos?</target>
+            </trans-unit>
+            <trans-unit id="9">
+              <source>New Comment</source>
+              <target>Nuevo Comentario</target>
+            </trans-unit>
+            <trans-unit id="10">
+              <source>Please sign in</source>
+              <target>Por favor inicie sesión</target>
+            </trans-unit>
+            <trans-unit id="11">
+              <source>Email</source>
+              <target>Correo Electrónico</target>
+            </trans-unit>
+            <trans-unit id="12">
+              <source>Password</source>
+              <target>Contraseña</target>
+            </trans-unit>
+            <trans-unit id="13">
+              <source>User Name</source>
+              <target>Nombre de usuario</target>
+            </trans-unit>
+            <trans-unit id="14">
+              <source>Confirm Password</source>
+              <target>Confirmar Contraseña</target>
+            </trans-unit>
+            <trans-unit id="15">
+              <source>Back</source>
+              <target>Atras</target>
+            </trans-unit>
+            <trans-unit id="16">
+              <source>User</source>
+              <target>Usuario</target>
+            </trans-unit>
+            <trans-unit id="17">
+              <source>Topic</source>
+              <target>Asunto</target>
+            </trans-unit>
+            <trans-unit id="18">
+              <source>Text</source>
+              <target>Texto</target>
+            </trans-unit>
+            <trans-unit id="19">
+              <source>OK</source>
+              <target>Aceptar</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

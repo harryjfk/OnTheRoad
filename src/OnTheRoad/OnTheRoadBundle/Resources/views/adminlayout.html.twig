@@ -1,0 +1,22 @@
+{% extends '::base.html.twig' %}
+{% block title %}Administration Panel{% endblock %}
+
+{% block body %}
+    {% include 'OnTheRoadOnTheRoadBundle:Admin:loginbar.html.twig' %}
+    <div class="container main-panel ui-btn-corner-all">
+        {% include 'OnTheRoadOnTheRoadBundle:Admin:header.html.twig' %}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="updatepanel" id="updatepanel">
+                    {% block container %}
+
+                    {% endblock %}
+                </div>
+
+            </div>
+
+        </div>
+        {% include 'OnTheRoadOnTheRoadBundle:Admin:footer.html.twig' %}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+<header id="main-header">
+    <div class="row">
+        <div class="col-xs-12">
+            <ul id="main-menu" class="nav nav-pills hidden-xs">
+{% for form in forms %}
+
+    <li class="{% if  app.request.get('_route') == form.route %}active{% endif %}"><a href="{{ path(form.route,{'locale':customlocale}) }}">{{form.name   }}</a></li>
+                {% endfor %}
+            </ul>
+            <a href="#" id="mobile-button-menu" class="btn btn-default visible-xs">
+                <span class="glyphicon-th-list"></span>
+
+            </a>
+
+
+        </div>
+
+    </div>
+    <div class="visible-xs">
+        <ul id="mobile-main-menu">
+            {% for form in forms %}
+                <li class="{% if  app.request.get('_route') == form.route %}active{% endif %}"><a href="{{ path(form.route,{'locale':customlocale}) }}">{{ form.name }}</a></li>
+
+            {% endfor %}
+
+        </ul>
+    </div>
+</header>
